@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cine Central</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <span class="marca">Cine Central</span>
+    <div id="sessao" class="sessao" hidden>
+      <span id="nome-usuario"></span>
+      <button id="btn-sair" class="botao botao-secundario" type="button">Sair</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="tela-login" hidden>
+      <h1>Entrar</h1>
+      <p class="texto-apoio">Entre com sua conta para comprar ingressos.</p>
+      <form id="form-login" class="formulario">
+        <label for="campo-usuario">Usuário</label>
+        <input id="campo-usuario" type="text" autocomplete="username" required>
+
+        <label for="campo-senha">Senha</label>
+        <input id="campo-senha" type="password" autocomplete="current-password" required>
+
+        <div class="linha-botoes">
+          <button type="submit" class="botao botao-primario">Entrar</button>
+          <button type="button" id="btn-criar" class="botao botao-secundario">Criar conta</button>
+        </div>
+        <span id="aviso-login" class="aviso" role="status" hidden></span>
+      </form>
+    </section>
+
+    <section id="tela-filmes" hidden>
+      <h1>Em cartaz</h1>
+      <p id="info-pool" class="texto-apoio"></p>
+      <span id="aviso-geral" class="aviso" role="status" hidden></span>
+
+      <div id="lista-filmes"></div>
+
+      <h2>Seus ingressos</h2>
+      <span id="aviso-ingressos" class="aviso" role="status" hidden></span>
+      <p id="sem-ingressos" class="texto-apoio">Você ainda não comprou nenhum ingresso.</p>
+      <ul id="lista-ingressos" class="lista-ingressos"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
